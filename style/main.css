@@ -36,7 +36,7 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 8rem;
 }
 
 h2 {
@@ -50,13 +50,19 @@ h3 {
 
 p {
     font-family: 'Dosis', sans-serif;
+    font-size: 2.5rem;
+    padding: 2rem 0;
 }
 
-/* Estilos para la navegación */
+/* NAVEGACION */
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+header #logo {
+    margin: 3rem;
 }
 
 nav {
@@ -89,4 +95,105 @@ nav ul li a:hover {
     background-color: #555;
     color: #ffcc00;
     border-radius: 5px;
+}
+
+/* ELEMENTOS */
+
+button {
+display: inline-block;
+margin: 35px 0;
+padding: 11px 16px;
+border: 0.3rem solid black;
+transition: all .3s linear;
+cursor: pointer;
+text-transform: uppercase;
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+
+/* MAIN */
+
+.container {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+/* SECCIONES */
+
+#heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #c0c0f9;
+    padding: 5vw;
+}
+
+section.right {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 3rem 0;
+}
+
+section.left {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 3rem 0;
+}
+
+
+.images {
+    overflow: hidden;
+}
+
+.images img {
+    max-width: 100%;
+}
+
+.info button {
+    margin-top: auto;
+}
+
+/* FOOTER */
+footer {
+    background-color: #000;  
+    color: #fff;  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 2rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.footer-section p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-section ul li a {
+    color: #fff; /* Letra blanca */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ffcc00; /* Color amarillo al pasar el cursor */
 }
