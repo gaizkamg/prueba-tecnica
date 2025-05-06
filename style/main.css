@@ -56,9 +56,11 @@ p {
 
 /* NAVEGACION */
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
 }
 
 header #logo {
@@ -71,18 +73,18 @@ nav {
     width: 100%;
 }
 
-nav ul {
+#menu {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
 
-nav ul li {
+#menu li {
     list-style: none;
 }
 
-nav ul li a {
+#menu li a {
     font-family: 'Dosis', sans-serif;
     font-size: 1.6rem;
     color: white;
@@ -91,10 +93,20 @@ nav ul li a {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav ul li a:hover {
+#menu li a:hover {
     background-color: #555;
     color: #ffcc00;
     border-radius: 5px;
+}
+
+/* Botón hamburguesa */
+#menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
 /* ELEMENTOS */
@@ -144,6 +156,13 @@ section.left {
     margin: 3rem 0;
 }
 
+section#contacto, section#mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+
+}
 
 .images {
     overflow: hidden;
@@ -155,6 +174,27 @@ section.left {
 
 .info button {
     margin-top: auto;
+}
+
+#map {
+    width: 100%;
+  margin: 0;
+}
+
+/* FORMULARIOS */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+}
+
+input, textarea {
+    margin: 1rem;
+}
+
+label {
+  font-size: 2.5 rem;
+  font-variant: small-caps;
 }
 
 /* FOOTER */
@@ -196,4 +236,53 @@ footer {
 
 .footer-section ul li a:hover {
     color: #ffcc00; /* Color amarillo al pasar el cursor */
+}
+
+/* Responsive: Móvil */
+@media (max-width: 768px) {
+    #menu {
+        display: none;
+    }
+
+    #menu li {
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    #menu-toggle {
+        display: block;
+        color: black;
+        font-size: 6rem;
+        position: absolute;
+        top: -19px;
+        right: 19px;
+        
+    }
+
+    #menu.show {
+        display: flex;
+    }
+
+    #logo img {
+        width: 70%;
+    }
+
+    nav {
+        background-color: transparent;
+    }
+
+
+}
+
+/* Responsive: Escritorio */
+@media (min-width: 769px) {
+    #menu {
+        display: flex;
+        position: static;
+        flex-direction: row;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
 }
