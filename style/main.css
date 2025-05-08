@@ -145,7 +145,7 @@ font-weight: bold;
 }
 
 section:nth-child(odd) {
-    background: linear-gradient(135deg, #e7f1ff, #6ae1ff); 
+    background: linear-gradient(135deg, #e7f1ff, #ff8d6a); 
     padding: 2rem;
     border-radius: 8px;
 }
@@ -402,10 +402,6 @@ footer {
 .footer-section {
     display: flex;
     flex-direction: column;
-}
-
-.footer-logo {
-    
 }
 
 .footer-section h3 {

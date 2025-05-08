@@ -2,10 +2,23 @@
 const aceptar = document.getElementById('politica-check');
 const enviar = document.getElementById('enviar-btn');
 
+// ESTADO INICIAL DESABILITADO
+if (enviar) {
+    enviar.disabled = true;
+    enviar.style.cursor = "not-allowed";
+    enviar.style.borderColor = "#eaeaea"
+}
+
 // LISTENERS
-if (loginForm) {
-    loginForm.addEventListener('submit', loginSession);
-   }
+aceptar.addEventListener('click', enviarON);
 
-   alert_card.addEventListener('click', closeModal)
-
+function enviarON() {
+    if (aceptar.checked) {
+        enviar.disabled = false;
+        enviar.style.cursor = "pointer";
+        enviar.style.borderColor = "#000"
+    } else {
+        enviar.disabled = true;
+        enviar.style.cursor = "not-allowed";
+    }
+}
