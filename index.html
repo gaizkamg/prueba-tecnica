@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/main.css">
-    <script src="js/main.js"></script>
-    <title>Digital Friends</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- SEO -->
+        <meta name="description" content="Digital Friends: Tu compañero digital de apoyo emocional, disponible 24/7. Con tecnología avanzada y empatía, ayudamos a manejar el estrés, la ansiedad y los momentos difíciles.">
+        <meta name="keywords" content="apoyo emocional, inteligencia artificial, bienestar, salud mental, tecnología empática, manejo del estrés, ansiedad, Digital Friends">
+        <meta name="author" content="Gaizka Multimedia Graphics">
+
+        <!-- REDES SOCIALES -->
+        <meta property="og:title" content="DigitalFriends">
+        <meta property="og:description" content="Tu compañero digital de apoyo emocional, disponible 24/7">
+        <meta property="og:image" content="image.jpg">
+        <meta property="og:url" content="https://digitalfriends.com">
+        <meta property="og:type" content="website">
+
+        <link rel="stylesheet" href="style/main.css">
+        <script src="js/main.js"></script>
+        <title>Digital Friends: Tu compañero digital de apoyo emocional, disponible 24/7.</title>
+    </head>
 <body>
+    
     <header>
         <div id="logo">
             <a href="index.html"><img src="img/logos/imagotipo-digital-friends.png" alt="logotipo digital friends"></a>
         </div>
+        <div id="fecha"></div>
         <nav>
             <button id="menu-toggle" aria-label="Abrir menú">
                 ☰
             </button>
             <ul id="menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="about.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <div id="heading">
+            <canvas></canvas>
             <div class="images">
-                <img src="img/illustration/roboto.png" alt="">
+                <img src="img/illustration/roboto.png" class="amigo">
             </div>
             <div class="info">
                 <h1>Tu amigo digital </h1>
@@ -36,7 +53,7 @@
                 <button>Contacta con tu amigo digital →</button>
             </div>
         </div>
-
+        
         <div class="container">
             <section id="history" class="right">
                 <div class="info">
@@ -47,12 +64,12 @@
                     <button>Prueba una conversación gratis →</button>
                 </div>
                 <div class="images">
-                    <img src="img/illustration/experiments.png" alt="">
+                    <img src="img/illustration/experiments.png" class="historia">
                 </div>
             </section>
             <section id="mission" class="left">
                 <div class="images">
-                    <img src="img/illustration/waiting.png" alt="">
+                    <img src="img/illustration/waiting.png" class="mision">
                 </div>
                 <div class="info">
                     <h2>Nuestra Misión</h2>
@@ -74,7 +91,7 @@
                     <button>Empieza tu viaje emocional →</button>
                 </div>
                 <div class="images">
-                    <img src="img/illustration/kiddo.png" alt="">
+                    <img src="img/illustration/kiddo.png" class="comienza">
                 </div>
             </section>
             <section id="gallery" class="right">
@@ -86,21 +103,22 @@
 
     <footer>
         <div class="footer-section">
-            <h3>Nosotros</h3>
-            <p>Digital Friends: Creando conexiones que sanan
-            Combinamos tecnología avanzada con empatía para ofrecer apoyo accesible, en cualquier momento y lugar</p>
-        </div>
-        <div class="footer-section">
             <h3>Redes Sociales</h3>
-            <p>¿Te identificas con nuestra misión? Síguenos en redes o escríbenos a email.
-            Juntos, podemos construir un mundo donde nadie se sienta solo.</p>
-            <ul>
-                <li><a href="instagram.com">Instagram</a></li>
-                <li><a href="bsky.app">Bluesky</a></li>
-                <li><a href="facebook.com">Facebook</a></li>
-                <li><a href="mailto:hello@digitalfriends.com">Email</a></li>
-            </ul>
-        </div>
+            <p>¿Te identificas con nuestra misión?</p>
+            <p>Síguenos en redes o escríbenos a email.</p>
+            <p>Juntos, podemos construir un mundo <br> donde nadie se sienta solo.</p>
+                <ul>
+                    <li><a href="instagram.com">Instagram</a></li>
+                    <li><a href="bsky.app">Bluesky</a></li>
+                    <li><a href="facebook.com">Facebook</a></li>
+                    <li><a href="mailto:hello@digitalfriends.com">Email</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <a href="index.html"><img src="img/logos/imagotipo-digital-friends.png" alt="logotipo digital friends" class="footer-logo"></a>
+                <p>Creando conexiones que sanan.</p>
+                <p>Combinamos tecnología avanzada con empatía para ofrecer apoyo accesible, en cualquier momento y lugar</p>
+            </div>
         <div class="footer-section">
             <h3>Contacto</h3>
             <ul>
@@ -116,5 +134,7 @@
             </ul>
         </div>
         </footer>
+    <script src="js/background.js"></script>
+    <script src="js/fecha.js"></script>
 </body>
 </html>

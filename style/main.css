@@ -15,8 +15,18 @@ body {
     font-size: 1.6rem;
     font-family: 'Dosis';
     color: black;
-    background-color: white;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    background-image: radial-gradient(circle at top right, rgb(250, 220, 250), transparent);
 }
+
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
 
 iframe {
     border: 0;
@@ -31,21 +41,21 @@ ul {
 }
 
 
-h1, h2 {
-    font-family: 'Boldonse', sans-serif;
-}
-
 h1 {
+    font-family: 'Boldonse', sans-serif;
     font-size: 8rem;
+    line-height: 1.4;
+    letter-spacing: 0.6rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-family: "Funnel Display";
+    font-size: 6rem;
 }
 
 h3 {
-    font-family: 'Funnel';
-    font-size: 1.5rem;
+    font-family: 'Funnel Display';
+    font-size: 4rem;
 }
 
 p {
@@ -54,12 +64,23 @@ p {
     padding: 2rem 0;
 }
 
+h1 + p {
+    font-family: "Funnel Display";
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1;
+    font-size: 4rem;
+}
+
+
 /* NAVEGACION */
 header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+   
+  
 }
 
 header #logo {
@@ -84,7 +105,7 @@ nav {
 }
 
 #menu li a {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Funnel Display', sans-serif;
     font-size: 2.5rem;
     color: white;
     text-decoration: none;
@@ -97,6 +118,7 @@ nav {
     color: #00ccff;
     border-radius: 5px;
 }
+
 
 /* Botón hamburguesa */
 #menu-toggle {
@@ -123,13 +145,13 @@ font-weight: bold;
 }
 
 section:nth-child(odd) {
-    background: linear-gradient(135deg, #d8bfd8, #e5b7ff); 
+    background: linear-gradient(135deg, #e7f1ff, #6ae1ff); 
     padding: 2rem;
     border-radius: 8px;
 }
 
 section:nth-child(even) {
-    background: linear-gradient(135deg, #f0afaf, #eaeaea); 
+    background: linear-gradient(135deg, #fd8da5, #eaeaea); 
     padding: 2rem;
     border-radius: 8px;
 }
@@ -153,11 +175,19 @@ section ul li {
 }
 
 section ul li:nth-child(odd) {
-    background-color: #d8bfd8; 
+    background-color: #d9e7f8; 
 }
 
 section ul li:nth-child(even) {
-    background-color: #d3d3d3; 
+    background-color: #ffffff; 
+}
+
+/* FECHA */
+#fecha {
+    position: absolute;
+    right: 37px;
+    top: 68px;
+    font-size: 2.1rem;
 }
 
 
@@ -168,6 +198,26 @@ section ul li:nth-child(even) {
     margin: 0 auto;
 }
 
+/* LOGIN */
+#alert-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 23%;
+    height: 200px;
+    border: 2px solid #333;
+    background-color: white;
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 2rem;
+    transform: translateX(-50%);
+}
+
+.hidden {
+    display: none;
+}
+
 /* SECCIONES */
 
 #heading {
@@ -175,10 +225,12 @@ section ul li:nth-child(even) {
     grid-template-columns: 1fr 1fr;
     background: #3F5EFB;
 background: radial-gradient(circle,rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
-    padding: 5vw;
+    padding: 8vw;
 }
 
-
+#heading.about {
+    background: radial-gradient(circle,rgb(70, 216, 252) 0%, rgba(63, 94, 251, 1) 100%);
+}
 
 section.right {
     display: grid;
@@ -196,21 +248,91 @@ section.left {
     padding: 10rem;
 }
 
-section#contacto, section#mapa {
+section#contacto, section#login {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0;
     padding: 10rem;
+    background: radial-gradient(circle,rgb(118, 118, 175) 0%, rgb(255, 172, 189) 100%);
+}
 
+section#mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 3rem 0;
+    background: #e7f1ff;
 }
 
 .images {
-    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
 
 .images img {
-    max-width: 100%;
+    position: absolute;
+}
+
+/* IMAGES HOME */
+
+.images img.amigo {
+    position: absolute;
+    top: -141px;
+    left: -187px;
+    width: 1031px;
+}
+
+.images img.historia {
+    position: absolute;
+    top: -248px;
+    left: -130px;
+    width: 944px;
+}
+
+.images img.mision {
+    position: absolute;
+    top: -220px;
+    left: -345px;
+    width: 950px;
+}
+
+.images img.comienza {
+    position: absolute;
+    top: -172px;
+    left: -35px;
+    width: 677px;
+}
+
+/* IMAGES ABOUT */
+
+.images img.conecta {
+    position: absolute;
+    top: -12rem;
+    left: -199px;
+    width: 138%;
+}
+
+.images img.asistencia {
+    position: absolute;
+    top: -20vh;
+    left: -35px;
+    width: 950px;
+}
+
+.images img.nosotros {
+    position: absolute;
+    top: -220px;
+    left: -307px;
+    width: 893px;
+}
+
+.images img.start {
+    position: absolute;
+    top: -17.2rem;
+    left: -35px;
+    width: 154%;
 }
 
 .info button {
@@ -243,24 +365,34 @@ label {
 
 /* FOOTER */
 footer {
-    background-color: #000;  
-    color: #fff;  
+    background: #b7b3c1;
+    color: #000000;  
     display: grid;
     grid-template-columns: repeat(3, 1fr);  
     gap: 2rem;
-    padding: 2rem;
+    padding: 5rem;
     text-align: center;
 }
 
+.footer-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    
+}
+
 .footer-section h3 {
-    font-size: 1.8rem;
+    font-size: calc(14px + (36 - 14) * ((100vw - 320px) / (2560 - 320)));
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
 
 .footer-section p {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     line-height: 1.8;
+    padding: 0 10rem;
 }
 
 .footer-section ul {
@@ -279,7 +411,7 @@ footer {
 }
 
 .footer-section ul li a:hover {
-    color: #ffcc00; /* Color amarillo al pasar el cursor */
+    color: #ff0062; /* Color amarillo al pasar el cursor */
 }
 
 /* Responsive: Móvil */
