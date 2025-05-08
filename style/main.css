@@ -218,6 +218,31 @@ section ul li:nth-child(even) {
     display: none;
 }
 
+#verPass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    margin: 0 auto;
+    color: #ddd;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+#verPass:hover {
+    background-color:  #ddd;
+    color: #000000;
+}
+
+#ojo-pass {
+    filter: invert();
+}
+
+#verPass:hover #ojo-pass {
+    filter: initial;
+}
+
 /* SECCIONES */
 
 #heading {

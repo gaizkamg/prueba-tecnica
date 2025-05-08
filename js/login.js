@@ -1,17 +1,18 @@
-
-document.addEventListener('DOMContentLoaded', function() {
 // CONSTANTES 
 const username = document.getElementById('username');
 const password = document.getElementById('password');
 const loginForm = document.getElementById('login-form');
 const alert_card = document.getElementById('alert-card');
+const ojoPass = document.getElementById('ojo-pass');
+const verPass = document.getElementById('verPass');
 
 // LISTENERS
 if (loginForm) {
     loginForm.addEventListener('submit', loginSession);
    }
 
-   alert_card.addEventListener('click', closeModal)
+alert_card.addEventListener('click', closeModal);
+verPass.addEventListener('click', verPassToggle);
 
 // DATOS PERSONALES
 const usuario = "usuario1";
@@ -43,4 +44,15 @@ function closeModal() {
     alert_card.classList.toggle('hidden');
 }
 
-});
+function verPassToggle() {
+    if (password.type === 'password') {
+        password.type = 'text';
+        ojoPass.src = 'img/logos/ojo-abierto.svg'; 
+    } else {
+        password.type = 'password';
+        ojoPass.src = 'img/logos/ojo-cerrado.svg'; 
+    }
+    
+}
+
+

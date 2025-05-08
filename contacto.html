@@ -17,7 +17,6 @@
         <meta property="og:type" content="website">
     
         <link rel="stylesheet" href="style/main.css">
-        <script src="js/main.js"></script>
         <title>CONTACTO - Digital Friends: Tu compañero digital de apoyo emocional, disponible 24/7.</title>
     </head>
 <body>
@@ -44,21 +43,21 @@
             <canvas></canvas>
             <h1>Contáctanos</h1>
             <form action="process.html" method="GET">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre-texto" name="nombre" required>
                 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email-texto" name="email" required>
                 
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje-texto" name="mensaje" rows="4" required></textarea>
 
                 <div>
-                    <input type="checkbox" id="policy" name="policy" required>
-                    <label for="policy">Acepto la política de datos</label>
+                    <input type="checkbox" id="politica-check" name="policy" required>
+                    <label for="politica">Acepto la política de datos</label>
                 </div>
                 
-                <button type="submit">Enviar</button>
+                <button type="submit" id="enviar-btn">Enviar</button>
             </form>
         </section>
 

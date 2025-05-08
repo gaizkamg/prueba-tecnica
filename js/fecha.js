@@ -1,4 +1,4 @@
-function updateDateTime() {
+function relojFecha() {
     const hoy = new Date();
     const days = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
     const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
@@ -14,8 +14,8 @@ function updateDateTime() {
     document.getElementById("fecha").textContent = formattedDateTime;
 }
 
-// Update every second
-setInterval(updateDateTime, 1000);
+// ACTUALIZAR SEGUNDERO
+setInterval(relojFecha, 1000);
 
-// Initial call
-updateDateTime();
+// LANZAR EL RELOJ
+relojFecha();
