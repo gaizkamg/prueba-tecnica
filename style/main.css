@@ -416,23 +416,26 @@ footer {
     padding: 0 10rem;
 }
 
-.footer-section ul {
-    list-style: none;
-    padding: 0;
+.footer-section.redes ul {
+display: flex;
+gap: 2rem;
+margin: 0 auto;
+font-size: 3rem;
+
 }
 
 .footer-section ul li {
     margin: 0.5rem 0;
 }
 
-.footer-section ul li a {
-    color: #fff; /* Letra blanca */
+.footer-section.redes ul li a {
+    color: #422f6e; 
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: #ff0062; /* Color amarillo al pasar el cursor */
+    color: white; 
 }
 
 /* Responsive: Móvil */

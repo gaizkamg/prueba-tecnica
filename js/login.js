@@ -47,10 +47,10 @@ function closeModal() {
 function verPassToggle() {
     if (password.type === 'password') {
         password.type = 'text';
-        ojoPass.src = 'img/logos/ojo-abierto.svg'; 
+        ojoPass.src = 'img/icons/ojo-abierto.svg'; 
     } else {
         password.type = 'password';
-        ojoPass.src = 'img/logos/ojo-cerrado.svg'; 
+        ojoPass.src = 'img/icons/ojo-cerrado.svg'; 
     }
     
 }
