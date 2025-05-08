@@ -440,13 +440,60 @@ font-size: 3rem;
 
 /* Responsive: Móvil */
 @media (max-width: 768px) {
+    #heading {
+        display: block;
+    }
+
+    section.left, section.right {
+        display: block;
+    }
+
+    .images img{
+        display: none;
+    }
+
+    #fecha {
+        position: absolute;
+  right: 40px;
+  top: 17px;
+  font-size: 1.6rem;
+    }
+    nav {
+        padding: 0;
+    }
+
     #menu {
         display: none;
+    }
+
+    #menu.clicked {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(135deg, #7a0033, #ff758c);
+        margin:0;
     }
 
     #menu li {
         text-align: center;
         padding: 1rem 0;
+        margin: 0;
+        width: 100%;
+        display: block;
+        cursor: pointer; 
+    }
+
+    #menu li:hover {
+       background-color: #000000 !important;
+       color: white;  
+    }
+
+    #menu li a {
+        font-size: 4rem;
+    }
+
+    #menu li a:hover {
+        font-size: 4rem;
+        background-color: #200812;
     }
 
     #menu-toggle {
@@ -466,10 +513,41 @@ font-size: 3rem;
     #logo img {
         width: 70%;
     }
+footer {
+    display: block;
+}
 
-    nav {
-        background-color: transparent;
-    }
+h1 {
+    font-family: 'Boldonse', sans-serif;
+    font-size: 5rem;
+    line-height: 1.4;
+    letter-spacing: 0.6rem;
+}
+
+h2 {
+    font-family: "Funnel Display";
+    font-size: 4rem;
+}
+
+h3 {
+    font-family: 'Funnel Display';
+    font-size: 3rem;
+}
+
+p {
+    font-family: 'Dosis', sans-serif;
+    font-size: 2rem;
+    padding: 0.5rem 0;
+}
+
+
+h1 + p {
+    font-family: "Funnel Display";
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1;
+    font-size: 2.5rem;
+}
 
 
 }
